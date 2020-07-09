@@ -37,40 +37,45 @@
           Projects
         </h2>
         <p style="color: #7d7d7d;">
-          This is all my projects created by me in this month
+          This is all my projects created by me along my career
         </p>
       </div>
       <b-row cols="4">
-        <b-col v-for="i in 3" :key="i" md="4" class="mb-4 box">
+        <b-col
+          v-for="(project, index) in [
+            'Hotel MS',
+            'Library MS',
+            'Car Rental MS',
+          ]"
+          :key="index"
+          md="4"
+          class="mb-4 box"
+        >
           <div
-            class="icon-box rounded-circle mx-auto mb-4"
+            class="icon-box rounded-circle mx-auto mb-5"
             style="background-color: #f0effe; width: 70px; height: 70px;"
           >
             <svg
-              width="3.8rem"
-              height="3.8rem"
+              width="4rem"
+              height="4rem"
               style="
                 display: block;
                 margin: auto;
-                padding: 18px 10px 10px 10px;
+                padding: 6px 3px 3px 3px;
                 color: #6776ef;
               "
               viewBox="0 0 16 16"
-              class="bi bi-bucket-fill"
+              class="bi bi-check"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 fill-rule="evenodd"
-                d="M8 1.5A4.5 4.5 0 0 0 3.5 6h-1a5.5 5.5 0 1 1 11 0h-1A4.5 4.5 0 0 0 8 1.5z"
-              />
-              <path
-                fill-rule="evenodd"
-                d="M1.61 5.687A.5.5 0 0 1 2 5.5h12a.5.5 0 0 1 .488.608l-1.826 8.217a1.5 1.5 0 0 1-1.464 1.175H4.802a1.5 1.5 0 0 1-1.464-1.175L1.512 6.108a.5.5 0 0 1 .098-.42z"
+                d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"
               />
             </svg>
           </div>
-          <h4 class="text-center" style="font-weight: 600;">Cash</h4>
+          <h4 class="text-center" style="font-weight: 600;">{{ project }}</h4>
           <p style="color: #7d7d7d;" class="text-center">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia
             eius hic sunt, ipsa earum delectus

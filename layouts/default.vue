@@ -15,7 +15,7 @@
               <a
                 :href="`#${nav.name.toLowerCase()}`"
                 class="nav-link top-nav-item"
-                :style="{ color: nav.isActive ? '#000' : '#aaa' }"
+                :style="{ color: nav.isActive ? '#000' : '#7d7d7d' }"
                 >{{ nav.name
                 }}<span
                   v-if="nav.isActive"
