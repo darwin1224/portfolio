@@ -42,6 +42,25 @@ const config = {
     id: 'UA-172133677-1',
   },
   modules: ['bootstrap-vue/nuxt', '@nuxtjs/pwa'],
+  bootstrapVue: {
+    bootstrapCSS: false,
+    bootstrapVueCSS: false,
+    componentsPlugin: ['BVToastPlugin'],
+    components: [
+      'BContainer',
+      'BRow',
+      'BCol',
+      'BFormInput',
+      'BButton',
+      'BNavbar',
+      'BNavbarToggle',
+      'BCollapse',
+      'BNavbarNav',
+      'BImg',
+      'BForm',
+      'BToast',
+    ],
+  },
   build: {},
 }
 
