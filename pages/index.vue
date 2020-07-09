@@ -13,6 +13,7 @@
             atque voluptas repellendus libero est eveniet cupiditate
           </p>
           <b-button
+            href="#contact"
             variant="primary"
             class="btn-get-started mt-3 px-5"
             style="padding: 0.8rem 3rem;"
@@ -22,6 +23,7 @@
         <b-col>
           <b-img
             :src="require('@/assets/work.png')"
+            alt="work_illustration"
             style="background-color: transparent;"
             width="550"
             height="300"
@@ -29,7 +31,7 @@
         </b-col>
       </b-row>
     </section>
-    <section style="padding: 0 7.5rem; margin-bottom: 20rem;">
+    <section id="projects" style="padding: 0 7.5rem; margin-bottom: 10rem;">
       <div style="margin-bottom: 7rem;" class="text-center">
         <h2 style="margin-bottom: 2rem; font-weight: 700; font-size: 3rem;">
           Projects
@@ -76,26 +78,89 @@
         </b-col>
       </b-row>
     </section>
+    <section id="contact" style="padding: 0 7.5rem; margin-bottom: 20rem;">
+      <div style="margin-bottom: 7rem;" class="text-center">
+        <h2 style="margin-bottom: 2rem; font-weight: 700; font-size: 3rem;">
+          Contact
+        </h2>
+        <p style="color: #555;">
+          Let me know if you are interested with me
+        </p>
+      </div>
+      <b-row cols="2">
+        <b-col>
+          <b-img
+            :src="require('@/assets/work.png')"
+            alt="work_illustration"
+            style="background-color: transparent;"
+            width="550"
+            height="300"
+          ></b-img>
+        </b-col>
+        <b-col>
+          <b-form @submit.prevent="handleSubmit">
+            <b-form-input
+              v-model="contactMeFormBody.name"
+              class="form-input"
+              placeholder="Enter Name"
+            ></b-form-input>
+            <b-form-input
+              v-model="contactMeFormBody.email"
+              class="form-input"
+              type="email"
+              placeholder="Enter Email"
+            ></b-form-input>
+            <b-form-input
+              v-model="contactMeFormBody.phoneNumber"
+              class="form-input"
+              placeholder="Enter Phone Number"
+            ></b-form-input>
+            <b-form-input
+              v-model="contactMeFormBody.address"
+              class="form-input"
+              placeholder="Enter Address"
+            ></b-form-input>
+            <b-button
+              type="submit"
+              variant="primary"
+              disabled
+              class="btn-get-started mt-3 px-5"
+              style="padding: 0.8rem 3rem;"
+              >Contact Me
+              <b-spinner small class="ml-2" label="loading..."></b-spinner
+            ></b-button>
+          </b-form>
+        </b-col>
+      </b-row>
+    </section>
   </section>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 
-interface UserListPageState {
-  email: string
-}
-
 export default Vue.extend({
   name: 'Index',
-  data(): UserListPageState {
+  data() {
     return {
-      email: '',
+      contactMeFormBody: {
+        name: '',
+        email: '',
+        phoneNumber: '',
+        address: '',
+      },
     }
   },
   methods: {
     handleSubmit() {
-      alert(this.email)
+      ;(this as any).$bvToast.toast(
+        "Thank you for submitting your credential. You will be notified soon if i'm interested.",
+        {
+          title: 'Thank you for your feedback!',
+          variant: 'info',
+          // solid: true,
+        }
+      )
     },
   },
 })
@@ -123,5 +188,13 @@ export default Vue.extend({
   &:hover {
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
   }
+}
+
+.form-input {
+  margin-bottom: 1.7rem;
+  padding: 1.7rem 2rem;
+  background-color: #e7e7e7;
+  border: none;
+  // border-radius: 10px;
 }
 </style>
