@@ -6,19 +6,23 @@
         <h2 style="font-weight: 700;">Portfolio</h2>
         <b-collapse id="nav-text-collapse" is-nav>
           <b-navbar-nav class="ml-auto">
-            <b-nav-item
+            <li
               v-for="(nav, index) in navItems"
               :key="index"
-              :href="`#${nav.name.toLowerCase()}`"
-              style="font-family: 'Poppins', sans-serif; font-weight: 500;"
-              class="top-nav-item mx-4"
+              class="mx-4"
               @click="handleNavItemClicked(index)"
-              >{{ nav.name
-              }}<span
-                v-if="nav.isActive"
-                class="nav-item-active-indicator"
-              ></span
-            ></b-nav-item>
+            >
+              <a
+                :href="`#${nav.name.toLowerCase()}`"
+                class="nav-link top-nav-item"
+                :style="{ color: nav.isActive ? '#000' : '#aaa' }"
+                >{{ nav.name
+                }}<span
+                  v-if="nav.isActive"
+                  class="nav-item-active-indicator"
+                ></span
+              ></a>
+            </li>
           </b-navbar-nav>
         </b-collapse>
       </b-container>
@@ -56,20 +60,27 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.top-nav-item > a {
+.top-nav-item {
   transition: all 0.5s;
   position: relative;
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: #555;
+
+  &:hover {
+    color: #000;
+  }
 }
 
 .nav-item-active-indicator {
   position: absolute;
   display: inline-block;
   transition: all 0.5s;
-  width: 20px;
-  border: 2px solid #007bff;
+  border: 3px solid #007bff;
   background-color: #000;
-  border-radius: 200px;
-  left: 32%;
+  border-radius: 50%;
+  left: 45%;
   bottom: 0;
 }
 </style>

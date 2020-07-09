@@ -6,7 +6,7 @@
           <h1 style="font-weight: 700; font-size: 3.2rem;" class="mb-3">
             Hello, developers!
           </h1>
-          <p style="color: #555; line-height: 28px;">
+          <p style="color: #7d7d7d; line-height: 28px;">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />
             Tenetur commodi molestias doloribus dolor, aut<br />
             totam aliquam sint quam iusto blanditiis<br />
@@ -36,7 +36,7 @@
         <h2 style="margin-bottom: 2rem; font-weight: 700; font-size: 3rem;">
           Projects
         </h2>
-        <p style="color: #555;">
+        <p style="color: #7d7d7d;">
           This is all my projects created by me in this month
         </p>
       </div>
@@ -71,9 +71,37 @@
             </svg>
           </div>
           <h4 class="text-center" style="font-weight: 600;">Cash</h4>
-          <p style="color: #555;" class="text-center">
+          <p style="color: #7d7d7d;" class="text-center">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia
             eius hic sunt, ipsa earum delectus
+          </p>
+          <p
+            class="text-center mt-5"
+            style="
+              color: #6776ef;
+              font-weight: 600;
+              font-family: 'Poppins', sans-serif;
+            "
+          >
+            See More
+            <span class="arrow-box"
+              ><svg
+                width="1.8rem"
+                height="1.8rem"
+                viewBox="0 0 16 16"
+                class="bi bi-arrow-right-short"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.793 8 8.146 5.354a.5.5 0 0 1 0-.708z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M4 8a.5.5 0 0 1 .5-.5H11a.5.5 0 0 1 0 1H4.5A.5.5 0 0 1 4 8z"
+                /></svg
+            ></span>
           </p>
         </b-col>
       </b-row>
@@ -83,7 +111,7 @@
         <h2 style="margin-bottom: 2rem; font-weight: 700; font-size: 3rem;">
           Contact
         </h2>
-        <p style="color: #555;">
+        <p style="color: #7d7d7d;">
           Let me know if you are interested with me
         </p>
       </div>
@@ -123,12 +151,10 @@
             <b-button
               type="submit"
               variant="primary"
-              disabled
               class="btn-get-started mt-3 px-5"
               style="padding: 0.8rem 3rem;"
-              >Contact Me
-              <b-spinner small class="ml-2" label="loading..."></b-spinner
-            ></b-button>
+              >Contact Me</b-button
+            >
           </b-form>
         </b-col>
       </b-row>
@@ -161,6 +187,9 @@ export default Vue.extend({
           // solid: true,
         }
       )
+      for (const key in this.contactMeFormBody) {
+        ;(this.contactMeFormBody as any)[key] = ''
+      }
     },
   },
 })
@@ -182,18 +211,33 @@ export default Vue.extend({
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  border: 1px solid #ccc;
   cursor: pointer;
 
-  &:hover {
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  .arrow-box {
+    display: inline-block;
+    transition: all 0.3s;
   }
+
+  &:hover {
+    border: 1px solid #6776ef;
+    transform: translateY(-10px);
+    box-shadow: 0 60px 30px -40px rgba(22, 57, 85, 0.2);
+  }
+
+  &:hover .arrow-box {
+    transform: translateX(5px);
+  }
+}
+
+::placeholder {
+  color: #9e9e9e;
 }
 
 .form-input {
   margin-bottom: 1.7rem;
   padding: 1.7rem 2rem;
-  background-color: #e7e7e7;
+  background-color: #f5f5f5;
   border: none;
   // border-radius: 10px;
 }
