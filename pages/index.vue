@@ -1,6 +1,6 @@
 <template>
   <section>
-    <section style="margin-bottom: 9rem; padding: 0 7.5rem;">
+    <section style="margin-bottom: 9rem;" class="container">
       <b-row cols="2">
         <b-col>
           <h1 style="font-weight: 700; font-size: 3.2rem;" class="mb-3">
@@ -31,7 +31,42 @@
         </b-col>
       </b-row>
     </section>
-    <section id="projects" style="padding: 0 7.5rem; margin-bottom: 10rem;">
+    <section id="about" style="margin-bottom: 10rem;" class="container">
+      <div style="margin-bottom: 7rem;" class="text-center">
+        <h2 style="margin-bottom: 2rem; font-weight: 700; font-size: 3rem;">
+          About Me
+        </h2>
+        <p style="color: #7d7d7d;">
+          This is my personality
+        </p>
+      </div>
+      <b-row cols="2">
+        <b-col style="width: 100px;">
+          <b-img
+            :src="require('@/assets/code.png')"
+            alt="code"
+            style="
+              background-color: transparent;
+              box-shadow: 0 7px 22px rgba(0, 0, 0, 0.18);
+            "
+            width="500"
+            height="300"
+          ></b-img>
+        </b-col>
+        <b-col style="width: 100px;" class="text-right">
+          <h1 style="font-weight: 700; font-size: 2rem;" class="mb-3">
+            I'm passionate about coding!
+          </h1>
+          <p style="color: #7d7d7d; line-height: 28px;">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />
+            Tenetur commodi molestias doloribus dolor, aut<br />
+            totam aliquam sint quam iusto blanditiis<br />
+            atque voluptas repellendus libero est eveniet cupiditate
+          </p>
+        </b-col>
+      </b-row>
+    </section>
+    <section id="projects" style="margin-bottom: 10rem;" class="container">
       <div style="margin-bottom: 7rem;" class="text-center">
         <h2 style="margin-bottom: 2rem; font-weight: 700; font-size: 3rem;">
           Projects
@@ -111,7 +146,7 @@
         </b-col>
       </b-row>
     </section>
-    <section id="contact" style="padding: 0 7.5rem; margin-bottom: 20rem;">
+    <section id="contact" style="margin-bottom: 20rem;" class="container">
       <div style="margin-bottom: 7rem;" class="text-center">
         <h2 style="margin-bottom: 2rem; font-weight: 700; font-size: 3rem;">
           Contact
@@ -123,10 +158,10 @@
       <b-row cols="2">
         <b-col>
           <b-img
-            :src="require('@/assets/work.png')"
-            alt="work_illustration"
+            :src="require('@/assets/message_sent.png')"
+            alt="send_contact"
             style="background-color: transparent;"
-            width="550"
+            width="500"
             height="300"
           ></b-img>
         </b-col>
