@@ -1,7 +1,7 @@
 <template>
   <section>
     <section style="margin-bottom: 9rem;" class="container">
-      <b-row>
+      <b-row class="jumbotron-section">
         <b-col sm="6" md="6" lg="6" class="jumbotron-welcome">
           <h1 style="font-weight: 700; font-size: 3.2rem;" class="mb-3">
             Hello, developers!
@@ -22,17 +22,15 @@
         </b-col>
         <b-col sm="6" md="6" lg="6">
           <b-img
+            class="sized-image"
             src="https://res.cloudinary.com/darwin1224/image/upload/c_scale,h_300,w_500/v1594365182/work_f8irso.png"
             alt="work_illustration"
-            style="background-color: transparent;"
-            width="550"
-            height="300"
           ></b-img>
         </b-col>
       </b-row>
     </section>
-    <section id="about" style="margin-bottom: 10rem;" class="container">
-      <div style="margin-bottom: 7rem;" class="text-center">
+    <section id="about" class="container">
+      <div class="about-header text-center">
         <h2 style="margin-bottom: 2rem; font-weight: 700; font-size: 3rem;">
           About Me
         </h2>
@@ -41,20 +39,19 @@
         </p>
       </div>
       <b-row>
-        <b-col sm="6" style="width: 100px;">
+        <b-col class="about-image" sm="6">
           <b-img
+            class="sized-image"
             src="https://res.cloudinary.com/darwin1224/image/upload/v1594365171/code_w8qsqr.png"
             alt="code"
             style="
               background-color: transparent;
               box-shadow: 0 7px 22px rgba(0, 0, 0, 0.18);
             "
-            width="500"
-            height="300"
           ></b-img>
         </b-col>
-        <b-col style="width: 100px;" sm="6" class="text-right">
-          <h1 style="font-weight: 700; font-size: 2rem;" class="mb-3">
+        <b-col sm="6" class="about-body">
+          <h1 class="about-me-text mb-3">
             I'm passionate about coding!
           </h1>
           <p style="color: #7d7d7d; line-height: 28px;">
@@ -83,8 +80,9 @@
             'Car Rental MS',
           ]"
           :key="index"
+          sm="12"
+          lg="3"
           md="6"
-          sm="6"
           class="mb-4 box"
         >
           <div
@@ -161,10 +159,7 @@
           <b-img
             src="https://res.cloudinary.com/darwin1224/image/upload/c_scale,h_300,w_500/v1594365181/message_sent_yzqicx.png"
             alt="send_contact"
-            class="contact-image"
-            style="background-color: transparent;"
-            width="500"
-            height="300"
+            class="sized-image contact-image"
           ></b-img>
         </b-col>
         <b-col sm="6">
@@ -238,7 +233,16 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+@media only screen and (max-width: 992px) {
+  .box {
+    max-width: 100% !important;
+  }
+}
 @media only screen and (max-width: 576px) {
+  .jumbotron-section {
+    flex-direction: column-reverse;
+  }
+
   .jumbotron-welcome {
     text-align: center;
 
@@ -249,6 +253,30 @@ export default Vue.extend({
 
   .box {
     max-width: 100% !important;
+  }
+
+  .sized-image {
+    height: 200px !important;
+  }
+
+  #about {
+    margin-bottom: 5rem !important;
+  }
+
+  .about-image {
+    margin-bottom: 4rem;
+  }
+  .about-header {
+    margin-bottom: 3rem !important;
+  }
+
+  .about-body {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .about-me-text {
+    font-size: 1.8rem !important;
   }
 
   #projects {
@@ -300,6 +328,31 @@ export default Vue.extend({
   &:hover .arrow-box {
     transform: translateX(5px);
   }
+}
+
+.sized-image {
+  width: 100%;
+  min-width: 300px;
+  height: 300px;
+  min-height: 200px;
+}
+
+#about {
+  margin-bottom: 10rem;
+}
+
+.about-header {
+  margin-bottom: 7rem;
+}
+
+.about-body {
+  width: 100px;
+  text-align: right;
+}
+
+.about-me-text {
+  font-weight: 700;
+  font-size: 2rem;
 }
 
 #projects {
