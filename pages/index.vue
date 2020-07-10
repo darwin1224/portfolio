@@ -1,8 +1,8 @@
 <template>
   <section>
     <section style="margin-bottom: 9rem;" class="container">
-      <b-row cols="2">
-        <b-col>
+      <b-row>
+        <b-col sm="6" md="6" lg="6" class="jumbotron-welcome">
           <h1 style="font-weight: 700; font-size: 3.2rem;" class="mb-3">
             Hello, developers!
           </h1>
@@ -20,9 +20,9 @@
             >Contact Me</b-button
           >
         </b-col>
-        <b-col>
+        <b-col sm="6" md="6" lg="6">
           <b-img
-            src="@/assets/work.png"
+            src="https://res.cloudinary.com/darwin1224/image/upload/v1594365181/message_sent_yzqicx.png"
             alt="work_illustration"
             style="background-color: transparent;"
             width="550"
@@ -40,10 +40,10 @@
           This is my personality
         </p>
       </div>
-      <b-row cols="2">
-        <b-col style="width: 100px;">
+      <b-row>
+        <b-col sm="6" style="width: 100px;">
           <b-img
-            src="@/assets/code.png"
+            src="https://res.cloudinary.com/darwin1224/image/upload/v1594365181/message_sent_yzqicx.png"
             alt="code"
             style="
               background-color: transparent;
@@ -53,7 +53,7 @@
             height="300"
           ></b-img>
         </b-col>
-        <b-col style="width: 100px;" class="text-right">
+        <b-col style="width: 100px;" sm="6" class="text-right">
           <h1 style="font-weight: 700; font-size: 2rem;" class="mb-3">
             I'm passionate about coding!
           </h1>
@@ -66,7 +66,7 @@
         </b-col>
       </b-row>
     </section>
-    <section id="projects" style="margin-bottom: 10rem;" class="container">
+    <section id="projects" class="container">
       <div style="margin-bottom: 7rem;" class="text-center">
         <h2 style="margin-bottom: 2rem; font-weight: 700; font-size: 3rem;">
           Projects
@@ -75,7 +75,7 @@
           This is all my projects created by me along my career
         </p>
       </div>
-      <b-row cols="4">
+      <b-row>
         <b-col
           v-for="(project, index) in [
             'Hotel MS',
@@ -83,7 +83,8 @@
             'Car Rental MS',
           ]"
           :key="index"
-          md="4"
+          md="6"
+          sm="6"
           class="mb-4 box"
         >
           <div
@@ -147,7 +148,7 @@
       </b-row>
     </section>
     <section id="contact" style="margin-bottom: 20rem;" class="container">
-      <div style="margin-bottom: 7rem;" class="text-center">
+      <div class="contact-header text-center">
         <h2 style="margin-bottom: 2rem; font-weight: 700; font-size: 3rem;">
           Contact
         </h2>
@@ -155,17 +156,18 @@
           Let me know if you are interested with me
         </p>
       </div>
-      <b-row cols="2">
-        <b-col>
+      <b-row>
+        <b-col sm="6">
           <b-img
-            src="@/assets/message_sent.png"
+            src="https://res.cloudinary.com/darwin1224/image/upload/v1594365181/message_sent_yzqicx.png"
             alt="send_contact"
+            class="contact-image"
             style="background-color: transparent;"
             width="500"
             height="300"
           ></b-img>
         </b-col>
-        <b-col>
+        <b-col sm="6">
           <b-form @submit.prevent="handleSubmit">
             <b-form-input
               v-model="contactMeFormBody.name"
@@ -236,6 +238,36 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+@media only screen and (max-width: 576px) {
+  .jumbotron-welcome {
+    text-align: center;
+
+    h1 {
+      font-size: 2.5rem !important;
+    }
+  }
+
+  .box {
+    max-width: 100% !important;
+  }
+
+  #projects {
+    margin-bottom: 5rem !important;
+  }
+
+  .contact-header {
+    margin-bottom: 3rem !important;
+  }
+
+  .contact-image {
+    margin-bottom: 4rem;
+  }
+
+  .btn-get-started {
+    width: 100%;
+  }
+}
+
 .btn-get-started {
   box-shadow: 0 3px 6px rgba(0, 112, 243, 0.3);
 
@@ -268,6 +300,14 @@ export default Vue.extend({
   &:hover .arrow-box {
     transform: translateX(5px);
   }
+}
+
+#projects {
+  margin-bottom: 10rem;
+}
+
+.contact-header {
+  margin-bottom: 7rem;
 }
 
 ::placeholder {
