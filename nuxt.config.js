@@ -41,7 +41,7 @@ const config = {
   googleAnalytics: {
     id: 'UA-172133677-1',
   },
-  modules: ['bootstrap-vue/nuxt', '@nuxtjs/pwa'],
+  modules: ['bootstrap-vue/nuxt', '@nuxtjs/pwa', '@nuxtjs/sentry'],
   bootstrapVue: {
     bootstrapCSS: false,
     bootstrapVueCSS: false,
@@ -60,6 +60,10 @@ const config = {
       'BForm',
       'BToast',
     ],
+  },
+  sentry: {
+    dsn:
+      'https://85614909388f4ffe82afefc2bde53167@o311426.ingest.sentry.io/5321503',
   },
   build: {},
 }
