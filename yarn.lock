@@ -1583,6 +1583,14 @@
   dependencies:
     vue-analytics "^5.22.1"
 
+"@nuxtjs/gtm@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/gtm/-/gtm-2.3.0.tgz#e6b6f29b62eb3d659ba1e44f353c8902ee49b4d9"
+  integrity sha512-sMDQomgZ4MuxDPtka+zoi3hfnNkHL8B5q1XJZVoY9qgN3/P3PiOOrPG/MnbAy8o49HPW3ByPW3hicJYPEKQYmw==
+  dependencies:
+    chalk "^4.0.0"
+    semver "^7.3.2"
+
 "@nuxtjs/pwa@^3.0.0-beta.20":
   version "3.0.0-beta.20"
   resolved "https://registry.yarnpkg.com/@nuxtjs/pwa/-/pwa-3.0.0-beta.20.tgz#56766da5485c09cb73307285292203f4a4417d5d"

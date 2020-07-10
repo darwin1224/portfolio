@@ -37,9 +37,13 @@ const config = {
     '@nuxt/typescript-build',
     '@nuxtjs/stylelint-module',
     '@nuxtjs/google-analytics',
+    '@nuxtjs/gtm',
   ],
   googleAnalytics: {
     id: 'UA-172133677-1',
+  },
+  gtm: {
+    id: 'GTM-THMSGKG',
   },
   modules: ['bootstrap-vue/nuxt', '@nuxtjs/pwa', '@nuxtjs/sentry'],
   bootstrapVue: {
