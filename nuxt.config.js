@@ -19,6 +19,48 @@ const config = {
         name: 'keyword',
         content: 'programming,frontend,nuxtjs,portfolio,website',
       },
+      {
+        name: 'og:title',
+        content: 'Darwin Personal Website',
+      },
+      {
+        name: 'og:description',
+        content: 'Darwin personal website and blog.',
+      },
+      {
+        name: 'og:type',
+        content: 'portfolio.',
+      },
+      {
+        name: 'og:image',
+        content:
+          'https://res.cloudinary.com/darwin1224/image/upload/c_scale,h_300,w_500/v1594365182/work_f8irso.png',
+      },
+      {
+        name: 'og:url',
+        content: 'https://darwin1224.netlify.app',
+      },
+      {
+        name: 'twitter:title',
+        content: 'Darwin Personal Website',
+      },
+      {
+        name: 'twitter:description',
+        content: 'Darwin personal website and blog.',
+      },
+      {
+        name: 'twitter:creator',
+        content: '@darwin1224',
+      },
+      {
+        name: 'twitter:image',
+        content:
+          'https://res.cloudinary.com/darwin1224/image/upload/c_scale,h_300,w_500/v1594365182/work_f8irso.png',
+      },
+      {
+        name: 'twitter:site',
+        content: 'https://darwin1224.netlify.app',
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
