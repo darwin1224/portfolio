@@ -162,25 +162,29 @@
           ></b-img>
         </b-col>
         <b-col sm="6">
-          <b-form netlify @submit.prevent="handleSubmit">
+          <b-form name="form-contact-me" netlify>
             <b-form-input
               v-model="contactMeFormBody.name"
+              name="name"
               class="form-input"
               placeholder="Enter Name"
             ></b-form-input>
             <b-form-input
               v-model="contactMeFormBody.email"
+              name="email"
               class="form-input"
               type="email"
               placeholder="Enter Email"
             ></b-form-input>
             <b-form-input
               v-model="contactMeFormBody.phoneNumber"
+              name="phone_number"
               class="form-input"
               placeholder="Enter Phone Number"
             ></b-form-input>
             <b-form-input
               v-model="contactMeFormBody.address"
+              name="address"
               class="form-input"
               placeholder="Enter Address"
             ></b-form-input>
@@ -212,21 +216,6 @@ export default Vue.extend({
         address: '',
       },
     }
-  },
-  methods: {
-    handleSubmit() {
-      ;(this as any).$bvToast.toast(
-        "Thank you for submitting your credential. You will be notified soon if i'm interested.",
-        {
-          title: 'Thank you for your feedback!',
-          variant: 'info',
-          // solid: true,
-        }
-      )
-      for (const key in this.contactMeFormBody) {
-        ;(this.contactMeFormBody as any)[key] = ''
-      }
-    },
   },
 })
 </script>
