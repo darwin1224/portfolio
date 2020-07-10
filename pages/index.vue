@@ -162,7 +162,7 @@
           ></b-img>
         </b-col>
         <b-col sm="6">
-          <b-form @submit.prevent="handleSubmit">
+          <b-form netlify @submit.prevent="handleSubmit">
             <b-form-input
               v-model="contactMeFormBody.name"
               class="form-input"
