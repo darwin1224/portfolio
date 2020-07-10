@@ -81,7 +81,6 @@
           ]"
           :key="index"
           sm="12"
-          lg="3"
           md="6"
           class="mb-4 box"
         >
