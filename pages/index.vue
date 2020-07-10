@@ -22,7 +22,7 @@
         </b-col>
         <b-col>
           <b-img
-            :src="require('@/assets/work.png')"
+            src="@/assets/work.png"
             alt="work_illustration"
             style="background-color: transparent;"
             width="550"
@@ -43,7 +43,7 @@
       <b-row cols="2">
         <b-col style="width: 100px;">
           <b-img
-            :src="require('@/assets/code.png')"
+            src="@/assets/code.png"
             alt="code"
             style="
               background-color: transparent;
@@ -158,7 +158,7 @@
       <b-row cols="2">
         <b-col>
           <b-img
-            :src="require('@/assets/message_sent.png')"
+            src="@/assets/message_sent.png"
             alt="send_contact"
             style="background-color: transparent;"
             width="500"

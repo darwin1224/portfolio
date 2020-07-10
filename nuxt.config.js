@@ -38,6 +38,7 @@ const config = {
     '@nuxtjs/stylelint-module',
     '@nuxtjs/google-analytics',
     '@nuxtjs/gtm',
+    '@aceforth/nuxt-optimized-images',
   ],
   googleAnalytics: {
     id: 'UA-172133677-1',
@@ -45,11 +46,13 @@ const config = {
   gtm: {
     id: 'GTM-THMSGKG',
   },
+  optimizedImages: {
+    optimizeImages: true,
+  },
   modules: ['bootstrap-vue/nuxt', '@nuxtjs/pwa', '@nuxtjs/sentry'],
   bootstrapVue: {
     bootstrapCSS: false,
     bootstrapVueCSS: false,
-    componentsPlugin: ['BVToastPlugin'],
     components: [
       'BContainer',
       'BRow',
@@ -62,7 +65,6 @@ const config = {
       'BNavbarNav',
       'BImg',
       'BForm',
-      'BToast',
     ],
   },
   sentry: {

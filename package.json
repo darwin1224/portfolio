@@ -26,6 +26,7 @@
     "nuxt": "^2.13.0"
   },
   "devDependencies": {
+    "@aceforth/nuxt-optimized-images": "^1.0.1",
     "@commitlint/cli": "^9.0.1",
     "@commitlint/config-conventional": "^9.0.1",
     "@nuxt/typescript-build": "^1.0.3",
@@ -44,6 +45,8 @@
     "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.4",
     "husky": "^4.2.5",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.0",
     "jest": "^26.0.1",
     "lint-staged": "^10.2.11",
     "node-sass": "^4.14.1",
