@@ -53,7 +53,12 @@ const config = {
   optimizedImages: {
     optimizeImages: true,
   },
-  modules: ['bootstrap-vue/nuxt', '@nuxtjs/pwa', '@nuxtjs/sentry'],
+  modules: [
+    'bootstrap-vue/nuxt',
+    '@nuxtjs/pwa',
+    '@nuxtjs/sentry',
+    '@nuxtjs/robots',
+  ],
   bootstrapVue: {
     bootstrapCSS: false,
     bootstrapVueCSS: false,
@@ -74,6 +79,10 @@ const config = {
   sentry: {
     dsn:
       'https://85614909388f4ffe82afefc2bde53167@o311426.ingest.sentry.io/5321503',
+  },
+  robots: {
+    UserAgent: '*',
+    Disallow: '',
   },
   build: {},
 }

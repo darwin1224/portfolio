@@ -3,7 +3,7 @@
     <b-navbar toggleable="sm" type="light" class="bg-white py-4">
       <b-container>
         <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
-        <h2 style="font-weight: 700;">Portfolio</h2>
+        <h2 style="font-weight: 700;">Darwin</h2>
         <b-collapse id="nav-text-collapse" is-nav>
           <b-navbar-nav class="ml-auto">
             <li
