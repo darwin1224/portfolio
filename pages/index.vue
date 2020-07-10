@@ -163,6 +163,7 @@
         </b-col>
         <b-col sm="6">
           <b-form name="form-contact-me" netlify>
+            <input type="hidden" name="form-name" value="form-contact-me" />
             <b-form-input
               v-model="contactMeFormBody.name"
               name="name"
