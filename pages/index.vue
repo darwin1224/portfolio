@@ -22,7 +22,7 @@
         </b-col>
         <b-col sm="6" md="6" lg="6">
           <b-img
-            src="https://res.cloudinary.com/darwin1224/image/upload/v1594365181/message_sent_yzqicx.png"
+            src="https://res.cloudinary.com/darwin1224/image/upload/c_scale,h_300,w_500/v1594365182/work_f8irso.png"
             alt="work_illustration"
             style="background-color: transparent;"
             width="550"
@@ -43,7 +43,7 @@
       <b-row>
         <b-col sm="6" style="width: 100px;">
           <b-img
-            src="https://res.cloudinary.com/darwin1224/image/upload/v1594365181/message_sent_yzqicx.png"
+            src="https://res.cloudinary.com/darwin1224/image/upload/v1594365171/code_w8qsqr.png"
             alt="code"
             style="
               background-color: transparent;
@@ -159,7 +159,7 @@
       <b-row>
         <b-col sm="6">
           <b-img
-            src="https://res.cloudinary.com/darwin1224/image/upload/v1594365181/message_sent_yzqicx.png"
+            src="https://res.cloudinary.com/darwin1224/image/upload/c_scale,h_300,w_500/v1594365181/message_sent_yzqicx.png"
             alt="send_contact"
             class="contact-image"
             style="background-color: transparent;"
