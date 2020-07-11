@@ -1,6 +1,7 @@
 const config = {
   mode: 'universal',
   target: 'static',
+  telemetry: false,
   server: {
     port: 3000,
     host: '0.0.0.0',
