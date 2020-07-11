@@ -5,6 +5,9 @@ const config = {
     port: 3000,
     host: '0.0.0.0',
   },
+  generate: {
+    fallback: true,
+  },
   head: {
     title: 'Darwin Personal Website',
     meta: [
