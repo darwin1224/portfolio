@@ -66,7 +66,6 @@ const config = {
   },
   css: ['@/assets/main.scss'],
   plugins: [],
-  components: true,
   buildModules: [
     '@nuxt/typescript-build',
     '@nuxtjs/stylelint-module',
