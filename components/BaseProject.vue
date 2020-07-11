@@ -18,7 +18,7 @@
       >
         <div
           class="icon-box rounded-circle mx-auto mb-5"
-          style="background-color: #f0effe; width: 70px; height: 70px;"
+          style="width: 70px; height: 70px; background-color: #f0effe;"
         >
           <svg
             width="4rem"
@@ -108,14 +108,14 @@ export default Vue.extend({
 }
 
 .box {
-  transition: all 0.3s;
-  padding: 3rem;
   max-width: 20.5rem;
-  margin-left: 1.5rem;
   margin-right: 1.5rem;
-  border-radius: 10px;
+  margin-left: 1.5rem;
+  padding: 3rem;
   border: 1px solid #ccc;
+  border-radius: 10px;
   cursor: pointer;
+  transition: all 0.3s;
 
   .arrow-box {
     display: inline-block;
@@ -124,8 +124,8 @@ export default Vue.extend({
 
   &:hover {
     border: 1px solid #6776ef;
-    transform: translateY(-10px);
     box-shadow: 0 60px 30px -40px rgba(22, 57, 85, 0.2);
+    transform: translateY(-10px);
   }
 
   &:hover .arrow-box {

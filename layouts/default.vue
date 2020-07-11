@@ -61,12 +61,12 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .top-nav-item {
-  transition: all 0.5s;
   position: relative;
   display: inline-block;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
   color: #555;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.5s;
 
   &:hover {
     color: #000;
@@ -75,12 +75,12 @@ export default Vue.extend({
 
 .nav-item-active-indicator {
   position: absolute;
-  display: inline-block;
-  transition: all 0.5s;
-  border: 3px solid #007bff;
-  background-color: #000;
-  border-radius: 50%;
-  left: 45%;
   bottom: 0;
+  left: 45%;
+  display: inline-block;
+  background-color: #000;
+  border: 3px solid #007bff;
+  border-radius: 50%;
+  transition: all 0.5s;
 }
 </style>
