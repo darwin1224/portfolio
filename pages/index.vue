@@ -23,12 +23,14 @@
               <input type="hidden" name="form-name" value="form-contact-me" />
               <b-form-input
                 v-model="contactMeFormBody.name"
+                aria-label="name"
                 name="name"
                 class="form-input"
                 placeholder="Enter Name"
               ></b-form-input>
               <b-form-input
                 v-model="contactMeFormBody.email"
+                aria-label="email"
                 name="email"
                 class="form-input"
                 type="email"
@@ -36,12 +38,14 @@
               ></b-form-input>
               <b-form-input
                 v-model="contactMeFormBody.phoneNumber"
+                aria-label="phone_number"
                 name="phone_number"
                 class="form-input"
                 placeholder="Enter Phone Number"
               ></b-form-input>
               <b-form-input
                 v-model="contactMeFormBody.address"
+                aria-label="address"
                 name="address"
                 class="form-input"
                 placeholder="Enter Address"
