@@ -12,7 +12,7 @@
       <b-col class="about-image" sm="6">
         <b-img
           class="sized-image"
-          src="https://res.cloudinary.com/darwin1224/image/upload/v1594365171/code_w8qsqr.webp"
+          src="https://res.cloudinary.com/darwin1224/image/upload/c_scale,h_300,w_540/v1594453068/code.webp"
           alt="code"
           style="
             background-color: transparent;

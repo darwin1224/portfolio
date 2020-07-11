@@ -22,7 +22,7 @@
       <b-col sm="6" md="6" lg="6">
         <b-img
           class="sized-image"
-          src="https://res.cloudinary.com/darwin1224/image/upload/c_scale,h_300,w_500/v1594365182/work_f8irso.webp"
+          src="https://res.cloudinary.com/darwin1224/image/upload/c_scale,h_300,w_540/v1594365182/work_f8irso.webp"
           alt="work_illustration"
         ></b-img>
       </b-col>

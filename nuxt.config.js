@@ -68,6 +68,7 @@ const config = {
   plugins: [],
   buildModules: [
     '@nuxt/typescript-build',
+    '@nuxtjs/pwa',
     '@nuxtjs/stylelint-module',
     '@nuxtjs/google-analytics',
     '@nuxtjs/gtm',
@@ -82,12 +83,7 @@ const config = {
   optimizedImages: {
     optimizeImages: true,
   },
-  modules: [
-    'bootstrap-vue/nuxt',
-    '@nuxtjs/pwa',
-    '@nuxtjs/sentry',
-    '@nuxtjs/robots',
-  ],
+  modules: ['bootstrap-vue/nuxt', '@nuxtjs/sentry', '@nuxtjs/robots'],
   bootstrapVue: {
     bootstrapCSS: false,
     bootstrapVueCSS: false,

@@ -11,7 +11,7 @@
     <b-row>
       <b-col sm="6">
         <b-img
-          src="https://res.cloudinary.com/darwin1224/image/upload/c_scale,h_300,w_500/v1594365181/message_sent_yzqicx.webp"
+          src="https://res.cloudinary.com/darwin1224/image/upload/c_scale,h_300,w_540/v1594365181/message_sent_yzqicx.webp"
           alt="send_contact"
           class="sized-image contact-image"
         ></b-img>
