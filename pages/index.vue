@@ -1,21 +1,21 @@
 <template>
   <section>
-    <lazy-hydrate v-slot="{ hydrated }" when-visible>
+    <lazy-hydrate v-slot="{ hydrated }" ssr-only>
       <div>
         <base-hero v-if="hydrated"></base-hero>
       </div>
     </lazy-hydrate>
-    <lazy-hydrate v-slot="{ hydrated }" when-visible>
+    <lazy-hydrate v-slot="{ hydrated }" ssr-only>
       <div>
         <base-about v-if="hydrated"></base-about>
       </div>
     </lazy-hydrate>
-    <lazy-hydrate v-slot="{ hydrated }" when-visible>
+    <lazy-hydrate v-slot="{ hydrated }" ssr-only>
       <div>
         <base-project v-if="hydrated"></base-project>
       </div>
     </lazy-hydrate>
-    <lazy-hydrate v-slot="{ hydrated }" when-visible>
+    <lazy-hydrate v-slot="{ hydrated }" ssr-only>
       <div>
         <base-contact v-if="hydrated">
           <template #form>
