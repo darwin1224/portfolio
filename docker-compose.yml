@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: app
+    ports:
+      - ${PORT}:${PORT}
+    volumes:
+      - ./:/app
+    tty: true
+    restart: always

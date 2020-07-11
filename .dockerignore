@@ -1,0 +1,10 @@
+.vscode
+dist
+.travis.yml
+.gitignore
+Dockerfile*
+docker-compose*
+*.md
+netlify.toml
+LICENSE
+.editorconfig
