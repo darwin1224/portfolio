@@ -71,6 +71,7 @@ import LazyHydrate from 'vue-lazy-hydration'
 
 export default Vue.extend({
   name: 'Index',
+  layout: 'home',
   components: {
     LazyHydrate,
     BaseHero: () => import('@/components/BaseHero.vue'),
