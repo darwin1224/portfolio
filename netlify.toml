@@ -1,3 +1,8 @@
 [build]
   command = "yarn build --target static && yarn export"
   publish = "dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/error"
+  status = "404"
