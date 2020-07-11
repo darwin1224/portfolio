@@ -107,6 +107,7 @@ const config = {
   sentry: {
     dsn:
       'https://85614909388f4ffe82afefc2bde53167@o311426.ingest.sentry.io/5321503',
+    disabled: process.env.NODE_ENV !== 'production',
   },
   robots: {
     UserAgent: '*',
